@@ -1,0 +1,6 @@
+Revision history for Perl extension Test::My::List::Util.
+
+0.01  Thu Apr 21 13:36:50 2011
+	- original version; created by h2xs 1.23 with options
+		-XAn Test::My::List::Util
+

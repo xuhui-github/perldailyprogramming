@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+$x=10;
+first();
+sub first{
+local ($x)="zen";
+second();
+}
+
+sub second{
+print $x;
+}
+print "\n$x\n";
+{
+local (@ARGV)=("sym1","symboltic");
+while(<>){
+print;
+}
+}
+
+while(<>){
+print;
+}
+########################################
+

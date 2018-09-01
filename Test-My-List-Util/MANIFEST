@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Test-My-List-Util.t
+lib/Test/My/List/Util.pm

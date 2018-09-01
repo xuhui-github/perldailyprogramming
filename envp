@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+sub test{
+my @a=(2,4,6);
+if (wantarray()){
+print "array envirment\n";
+return @a;
+}else{
+print "scalar envirment\n";
+return scalar(@a);}
+}
+
+my @p=test;
+my $i=test;
+print "$^O\n";
+

@@ -1,0 +1,23 @@
+package Animals;
+sub descripe{
+print "this is a animal only\n";
+}
+package Sheep;
+@ISA=qw(Animals);
+sub move{
+print "this is a sheep moving\n";
+}
+sub descripe{
+print "this is a white sheep\n"
+}
+
+Sheep->move;
+Sheep->descripe;
+print "the current package is${__PACKAGES__}\n";
+
+while(my($k,$v)=each(%main::DB::)){
+print "$k is $v\n";
+}
+
+
+

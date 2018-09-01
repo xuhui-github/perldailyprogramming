@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+use Mine::Stack;
+my $s=Mine::Stack->new();
+$s->pushit("one");
+$s->pushit("two");
+$s->pushit("three");
+$s->pushit("four");
+$s->pushit("five");
+while(!$s->is_empty){
+print $s->popit,"\n";}
+

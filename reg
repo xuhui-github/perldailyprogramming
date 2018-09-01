@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+my $reg="$$$$";
+eval {my $r=qr[/$reg/];};
+ print "$@\n" if $@;

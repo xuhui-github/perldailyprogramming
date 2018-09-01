@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+die "usage:myfind filename\n" if @ARGV==0;
+$first=shift @ARGV;
+$time=-M $first;
+foreach(@ARGV){
+$temp=-M;
+if($temp>$time){
+$time=$temp;
+$first=$_;
+}
+}
+printf "the oldest file :%s %.2fdays alive\n",$first,$time;

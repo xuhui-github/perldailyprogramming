@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$str="good food";
+$str=~s/o*/e/g;
+print $str,"\n";
+

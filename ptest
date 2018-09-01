@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+print "enter a number";
+my $number=<STDIN>;
+chomp($number);
+print "$number is just inputed\n";
+my @item;
+my $line=<STDIN>;
+@item=split " " ,$line;
+getc();
+
+

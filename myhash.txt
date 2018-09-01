@@ -1,0 +1,20 @@
+hash{
+  hhh=iii;
+  aaa={
+    fff=ggg;
+    ddd=eee;
+    };
+  }
+test=littlefunny;
+color=blue;
+second{
+  girl={
+    address=qingxian;
+    tiantian={
+      color=white;
+      heart=erhua;
+      };
+    };
+  }
+name=hui;
+secondcolor=cyan;

@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+sub one{
+shift;
+print @_,"\n";
+}
+
+sub test{
+print "args in test:",@_,"\n";
+print "invoke one\n";
+one(@_);
+print "end of one\n";
+print "args in test:",@_,"\n";
+}
+test(1,2,3,4,5);
+

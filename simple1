@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+use Mine::Stack;
+while(my($key,$value)=each(%mani::Mine::Stack::)){
+print "$key=$value\n";
+}
+

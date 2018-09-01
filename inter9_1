@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+my @files=map $_->[0] ,sort {$a->[1]<=>$b->[1]} map [$_,-s $_], glob "/bin/*";
+foreach(@files){
+print $_,":", -s $_,"\n";}
+

@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+#{
+#local $/=undef;
+#$a=<STDIN>;
+#print $a;
+#}
+$spud="Wow";
+@spud=("idaho","russet");
+*potato=*spud;
+print "$potato\n";
+print"@potato\n";
+@potato=("white","red","green");
+print "@spud\n";
+$b=10;
+{
+local *b;
+*b=*a;
+$b=20;
+}
+print "$a\n";
+print "$b\n";
+sub greet{
+print "hello world\n";
+}
+*ptr=*greet;
+ptr();
+ptr();
+
+
+

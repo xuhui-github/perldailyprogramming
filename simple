@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+*p=\"this is a string\n";
+print $p;
+$p="no";
+print $p;
+

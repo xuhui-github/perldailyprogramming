@@ -1,0 +1,39 @@
+package A;
+
+sub new{
+my $class=shift;
+my $ref={};
+$ref->{"name"}=shift if @_;
+return bless $ref,$class;
+}
+
+
+sub show{
+my $ref=shift;
+print $ref->{"name"},"\n";
+}
+
+package B;
+ 
+@ISA=qw(A);
+
+sub new{
+my $class=shift;
+my $ref=$class->SUPER::new(@_);
+shift;
+$ref->{"age"}= shift if @_;
+return $ref;
+}
+
+sub show{
+my $ref=shift;
+$ref->SUPER::show;
+print $ref->{"age"},"\n";
+
+}
+
+my $b=B->new("john",23);
+$b->show();
+my $a=A->new("marry");
+$a->show();
+

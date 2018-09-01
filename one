@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+our  $str="a::b";
+($s=$str)=~s/:/_/g;
+print $s,"\n";
+print $str,"\n";
+ $value="str";
+${$value}="e:::gg";
+print $str;
+my $v="abcend  34322\n defend\nendend";
+$v=~s/end\b/END/g;
+$v=~s/\n/?/g;
+print $v,"\n";
+$v=~/(\d{1,6})/;
+print $1,"\n";
+
+
+

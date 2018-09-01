@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+die "usage:addright filename\n" if @ARGV==0;
+open IN,"<",$ARGV[0] or die "Can\'t open $ARGV[0]\n";
+@lines=<IN>;
+close IN;
+chomp;
+open OUT,">",$ARGV[0] or die "Can\'t open $ARGV[0]\n";
+foreach(@lines){
+s/(^#!.*$)/$1\n## Copyright (c) 2010 by Hui/;
+print OUT "$_\n";
+}
+close OUT;
+
+
+ 

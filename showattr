@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+foreach(@ARGV){
+print "$_:";
+if(-e $_){print "-e";}
+if(-r $_){print "-r";}
+if(-w $_){print "-w";}
+if(-x $_){print "-x";}
+print "\n";
+}
+

@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+$path="";
+@files=();
+print "Enter the path to change:";
+$path=<STDIN>;
+chomp $path;
+if($path=~/^\s*$/){
+chdir;
+opendir DH,".";
+@files=readdir DH;
+}
+else{
+opendir DH,$path;
+@files=readdir DH;
+}
+foreach(sort @files){
+print "$_\n";
+}
+
+

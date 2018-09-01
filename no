@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+my @array=qw( nohn 42 marry 23 tom 56);
+my %hash=(@array);
+print %hash,"\n";
+print $hash{marry},"\n";
+print $hash{tom},"\n";
+print "\$hash{tom}is not defined by now\n"if not defined $hash{tom};
+print keys %hash,"\n";;
+print values %hash,"\n";
+print "$hash{'marry'}\n";
+@k=sort {$hash{$a} <=>$hash{ $b}} keys %hash;
+print @k,"\n";
+

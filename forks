@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+my $r;
+$r=fork;
+if($r<0){
+exit(-1);
+}
+elsif($r==0){
+
+print "child\n";
+exit(0);
+}
+else
+{
+print "parent\n";
+system("ps");
+
+exit(0);
+}
+

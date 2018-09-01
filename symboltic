@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+#use strict 'refs';
+ our  $x=45;
+  our $var="x";
+#${$var}=234;
+#symbeltic reference
+$$var=234;
+#$x is 234 now
+print $x,"\n";
+$v="x";
+#declare a array named "x",and set its value;
+#use symbeltic reference
+$y="array"; 
+@$v=(23,55,67,34);
+@{$y}=(3,3,3,3,3,3,3,3,3,3,3,3);
+print "@array\n";
+
+print "@x\n";
+#############################################################################
+
+$a=20;#global variable
+
+{
+local($a);#store value of $a ,then set it a undef value;
+my @b;#lexical variable
+
+$a=10;
+@b=("wallace","grommit");
+print "$a\n";
+print "@b\n";
+}
+
+print "$a\n";
+print "@b\n";
+

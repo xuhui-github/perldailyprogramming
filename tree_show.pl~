@@ -1,0 +1,61 @@
+#!/usr/bin/perl
+sub list_dir{
+if(-f $_[0]){
+my @names=split "/",$_[0];
+if($_[1]<0){
+print "$names[@names-1] is just a file.\n";
+return;
+}else{
+if($_[1]==0){
+
+print " " x $_[1],"|\n";
+print " " x $_[1],"+","-" x 2;
+print "$names[@names-1]\n";
+}else{
+my $c=$_[1]/2;
+print "|  " x $c,"|\n";
+print "|  " x $c,"+","-" x 2;
+print "$names[@names-1]\n";
+}
+return;}
+}
+else{
+if(-R $_[0] and -O $_[0]){
+my @names=split "/",$_[0];
+if($_[0] eq "/"){
+print "/\n";}
+elsif(length($_[0])>1 and substr($_[0],-1,1) eq "/")
+{print "",substr($_[0],0,length($_[0])-1),"\n";}
+elsif($_[0] ne "/" and $_[1]<0){
+print "$names[@names-1]\n";
+}else{
+  if($_[1]==0){
+print " " x $_[1],"|\n";
+print " " x $_[1],"+","-" x 2;
+print "$names[@names-1]\n";}
+  else{
+my $c=$_[1]/2;
+print "|  " x $c,"|\n";
+print "|  " x $c,"+","-" x 2;
+print "$names[@names-1]\n";
+}
+}
+
+opendir DH,$_[0] or return;
+my @files=readdir DH;
+closedir DH;
+for(my $i=0;$i<@files;$i++){
+next if $files[$i] eq "." or $files[$i] eq "..";
+if($_[0] eq "/"){
+list_dir("/$files[$i]",$_[1]+2);}
+elsif($_[0] eq "../" or $_[0] eq "./" or substr($_[0],-1,1) eq "/")
+{list_dir("$_[0]$files[$i]",$_[1]+2);}
+else{list_dir("$_[0]/$files[$i]",$_[1]+2);
+}
+}
+}}
+}
+
+list_dir($ARGV[0],-2);
+
+

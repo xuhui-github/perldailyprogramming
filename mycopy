@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+if(@ARGV==0){die "usage:mycopy filename\n";
+}
+my $outfile="$ARGV[0].out";
+
+open IN,"<",$ARGV[0] or die "can\'t open $ARGV[0]\n";
+open OUT,">",$outfile or die "can\'t open $outfile\n";
+while(<IN>){
+s/$1/Larry/gi;
+print OUT $_;
+}
+close IN;
+close OUT;
+

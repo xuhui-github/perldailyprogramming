@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+use My::List::Util;
+my @i=qw(1 2 3);
+my $sum=sum(@i);
+print "$sum\n";
+ @i=shuffle(@i);
+print "@i\n";
+

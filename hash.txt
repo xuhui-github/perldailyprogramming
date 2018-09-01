@@ -1,0 +1,15 @@
+name=hui;
+age=32;
+address=reqiu;
+china {
+        hebei={shenghui=shijiazhong;
+               address=hubei;
+               };
+        pp=rr;
+      }
+dog{
+     cat={};
+     pear={};
+    name=pappy;
+   }
+color=red; 

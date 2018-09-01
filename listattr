@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+use Mine::Stack;
+while (my($a,$b)=each(%Mine::Stack::)){
+print "$a=$b\n";
+}

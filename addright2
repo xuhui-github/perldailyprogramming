@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+%dosome=();
+foreach(@ARGV){
+$dosome{$_}=1;
+}
+while(<>){
+if(/^##/){
+delete $dosome{$ARGV};
+}
+}
+@ARGV=keys %dosome;
+$^I=".bak";
+while(<>){
+if(/^#!/){
+$_.="##  Copyright  (c) 2010 by Hui\n";
+}
+
+print;
+
+}
+

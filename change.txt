@@ -1,0 +1,17 @@
+city=reqiureqiu;
+memory{
+  peoples={
+    boy={
+      name=liuerhua;
+      address=hejian;
+      sex=boy;
+      };
+    girl={
+      name=tiantian;
+      address=qingxian;
+      sex=girl;
+      };
+    perporty=lovers;
+    };
+  }
+nums=numnum;

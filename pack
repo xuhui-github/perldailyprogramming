@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+ $str=pack("dd",(2.435343,233333333,2));
+print $str;
+my @nums=unpack "dd",$str;
+print "\nthe result unpacked is @nums\n";
+$out=pack "a8a8","abcdefghi","23423232323","d","wear";
+print $out,"\n";
+#abcdefgh 23423232
+@result=unpack "a8a8",$out;
+print "@result\n";
+$out=pack( "a8C","noway",12);
+print $out,"\n";
+#nowayc0
+@result=unpack "a8h2",$out;
+print @result,"\n";
+@result=unpack "a8B8",$out;
+# noway00001100
+print @result,"\n";

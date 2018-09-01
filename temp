@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+my @line=(8, 9, 1000);
+for(@line){
+$_=23;
+}
+print "@line\n";

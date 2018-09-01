@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+use Mine::Stack;
+my $s=Mine::Stack->new;
+$s->pushit("no");
+$s->pushit("yes");
+print $s->popit,"\n";
+

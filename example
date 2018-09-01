@@ -1,0 +1,11 @@
+#!/usr/perl
+use IO::File;
+use Data::Dumper qw(Dumper);
+my %hash=qw(Fred Flintstone
+           Barney Rubble);
+my @array=qw(Fred Barney Betty Wilma);
+print Dumper(\%hash,\@array);
+my $dd=Data::Dumper->new([\%hash,\@array],[qw(*hash *array)]);
+my $file=IO::File->new(">data.txt");
+  $file->print($dd->Dump());
+  $file->close();

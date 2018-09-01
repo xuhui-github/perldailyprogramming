@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+while(<STDIN>){
+chomp;
+if(/^\d{3,5}$/){
+print "$_ is mathed\n";
+}
+elsif(/^\s*$/){
+last;}
+else{
+print "no matched\n";
+}
+}
+

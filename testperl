@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+my @in=("one","two");
+my @out=(["one","two"],three);
+my $p_out=\@out;
+print $p_out->[0]->[0];
+
